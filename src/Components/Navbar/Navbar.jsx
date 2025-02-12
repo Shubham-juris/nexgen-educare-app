@@ -15,7 +15,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import SearchIcon from '@mui/icons-material/Search';
 import { styled } from '@mui/system';
 import { Link } from 'react-router-dom';
-import Logo from '../../assets/Navbar/Logo.webp';
+import Logo from '../../assets/Navbar/Logo.png';
 
 // Global Link Style
 const StyledLink = styled(Link)({
