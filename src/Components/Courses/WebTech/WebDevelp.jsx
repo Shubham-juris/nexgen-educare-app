@@ -1,14 +1,17 @@
-import React from 'react';
-import Grid from '@mui/material/Grid2';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import {
+  Box,
   Card,
   CardContent,
   CardMedia,
   Typography,
   Button,
+  Container,
 } from '@mui/material';
-import { Link } from 'react-router-dom'; // Import Link for routing
- 
+import { Link } from 'react-router-dom';
+
 import GraphicDesign from '../../../assets/Courses/WebTech/Graphic-Design.png';
 import FullStackDeveloper from '../../../assets/Courses/WebTech/Full-Stack-Developer.png';
 import WebDesigning from '../../../assets/Courses/WebTech/Web-Designing.png';
@@ -17,7 +20,7 @@ import VideoEditing from '../../../assets/Courses/WebTech/Video-Editing.png';
 import SEOManagement from '../../../assets/Courses/WebTech/SEO-Management.png';
 import DigitalMarketing from '../../../assets/Courses/WebTech/Digital-Marketing.png';
 import ContentWriting from '../../../assets/Courses/WebTech/Content-Writing.png';
- 
+
 const cardsData = [
   {
     id: 1,
@@ -68,84 +71,93 @@ const cardsData = [
     path: '/content-writing',
   },
 ];
- 
+
 const WebTechCoursesCards = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
-    <Grid container spacing={2} justifyContent='center'>
-      <Typography
-        variant='h4'
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          width: '100%',
-          mt:'10%',
-          mb: 3,
-        }}
-      >
-        Web Technologies
-      </Typography>
-      {cardsData.map((card) => (
-        <Grid item xs={12} sm={6} md={3} key={card.id}>
-          <Link to={card.path} style={{ textDecoration: 'none' }}>
-            {' '}
-            {/* Wrap card with Link */}
-            <Card
-              sx={{
-                width: '280px',
-                height: 320,
-                textAlign: 'center',
-                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-                borderRadius: '10px',
-                '&:hover': {
-                  boxShadow: '0 6px 12px rgba(0, 0, 0, 0.3)',
-                },
-              }}
-            >
-              <CardMedia
-                component='img'
-                alt={card.title}
-                image={card.image}
-                title={card.title}
-                sx={{
-                  padding: '25px 25px 0px 25px',
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  width: '100%',
-                  objectFit: 'cover',
-                  height: 200,
-                }}
-              />
-              <CardContent sx={{ backgroundColor: '#f4f4f4' }}>
-                <Typography
-                  variant='h6'
-                  sx={{ fontWeight: 'bold', color: '#333' }}
+    <Container maxWidth='lg'>
+      <Box display='flex' flexDirection='column' alignItems='center' mt={5}>
+        <Typography
+          variant='h4'
+          align='center'
+          sx={{ mb: 5, fontWeight: 'bold', color: '#333' }}
+        >
+          Web Technologies
+        </Typography>
+        <Box
+          display='grid'
+          gap={3}
+          gridTemplateColumns={{
+            xs: '1fr',
+            sm: '1fr 1fr',
+            md: '1fr 1fr 1fr 1fr',
+          }}
+          justifyContent='center'
+        >
+          {cardsData.map((card) => (
+            <Box key={card.id} data-aos='fade-up'>
+              <Link to={card.path} style={{ textDecoration: 'none' }}>
+                <Card
+                  sx={{
+                    width: 300,
+                    height: 350,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
+                    textAlign: 'center',
+                    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '10px',
+                    '&:hover': { boxShadow: '0 6px 12px rgba(0, 0, 0, 0.3)' },
+                  }}
                 >
-                  {card.title}
-                </Typography>
-                <Grid
-                  container
-                  spacing={2}
-                  justifyContent='center'
-                  sx={{ marginTop: 2 }}
-                >
-                  <Grid item>
-                    <Button variant='contained' size='small' color='primary'>
-                      Details
+                  <CardMedia
+                    component='img'
+                    alt={card.title}
+                    image={card.image}
+                    title={card.title}
+                    sx={{
+                      width: '100%',
+                      height: 180,
+                      objectFit: 'cover',
+                      backgroundColor: '#f8f8f8',
+                    }}
+                  />
+                  <CardContent
+                    sx={{
+                      backgroundColor: '#f4f4f4',
+                      flexGrow: 1,
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                    }}
+                  >
+                    <Typography
+                      variant='h6'
+                      sx={{ fontWeight: 'bold', color: '#333' }}
+                    >
+                      {card.title}
+                    </Typography>
+                    <Button
+                      variant='outlined'
+                      size='small'
+                      color='secondary'
+                      sx={{ mt: 2 }}
+                    >
+                      Enroll Now
                     </Button>
-                  </Grid>
-                  <Grid item>
-                    <Button variant='outlined' size='small' color='secondary'>
-                      Buy Now
-                    </Button>
-                  </Grid>
-                </Grid>
-              </CardContent>
-            </Card>
-          </Link>
-        </Grid>
-      ))}
-    </Grid>
+                  </CardContent>
+                </Card>
+              </Link>
+            </Box>
+          ))}
+        </Box>
+      </Box>
+    </Container>
   );
 };
- 
+
 export default WebTechCoursesCards;

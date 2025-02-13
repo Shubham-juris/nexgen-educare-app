@@ -10,7 +10,7 @@ app.use(express.json());
 
 // MySQL Database Connection
 const db = mysql.createConnection({
-  host: '97.74.93.232.net',
+  host: 'localhost',
   user: 'nexgen',
   password: 'Nexgen$2025',
   database: 'admin_nexgen',
