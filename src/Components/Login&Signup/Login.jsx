@@ -31,8 +31,8 @@ const Login = ({ onLogin }) => {
 
   // Hardcoded credentials
   const validCredentials = {
-    userId: 'vinay',
-    password: 'vinay123',
+    userId: 'student',
+    password: '1234',
   };
 
   const handleSubmit = (event) => {

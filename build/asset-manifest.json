@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d45e2830.css",
-    "main.js": "/static/js/main.924bcd98.js",
+    "main.css": "/static/css/main.0b4fa769.css",
+    "main.js": "/static/js/main.6cd64a04.js",
     "static/media/Login&Signup.jpg": "/static/media/Login&Signup.57a7accec4d9328feee5.jpg",
     "static/media/coaching.png": "/static/media/coaching.2094cac066cf82cecabb.png",
     "static/media/demo4.png": "/static/media/demo4.d6baad907bdb56153065.png",
@@ -10,6 +10,7 @@
     "static/media/chinese.png": "/static/media/chinese.65d40dc57788bcfff80e.png",
     "static/media/italian.png": "/static/media/italian.6b2a9babd8fe4b809e42.png",
     "static/media/north-india.png": "/static/media/north-india.26a62de9f9371ecaf48e.png",
+    "static/media/Logo.png": "/static/media/Logo.8be04ac338c9f90047bd.png",
     "static/media/Logo.webp": "/static/media/Logo.8be04ac338c9f90047bd.webp",
     "static/media/SEO-Management.png": "/static/media/SEO-Management.e00b31febd32730db88f.png",
     "static/media/Security-Training.png": "/static/media/Security-Training.7cd207165f848ada68dc.png",
@@ -52,11 +53,11 @@
     "static/media/Dental-Receptionist.png": "/static/media/Dental-Receptionist.fb90e6d15c14c4cb9ba1.png",
     "static/media/Contact.jpg": "/static/media/Contact.ed749f624113a16ca481.jpg",
     "index.html": "/index.html",
-    "main.d45e2830.css.map": "/static/css/main.d45e2830.css.map",
-    "main.924bcd98.js.map": "/static/js/main.924bcd98.js.map"
+    "main.0b4fa769.css.map": "/static/css/main.0b4fa769.css.map",
+    "main.6cd64a04.js.map": "/static/js/main.6cd64a04.js.map"
   },
   "entrypoints": [
-    "static/css/main.d45e2830.css",
-    "static/js/main.924bcd98.js"
+    "static/css/main.0b4fa769.css",
+    "static/js/main.6cd64a04.js"
   ]
 }

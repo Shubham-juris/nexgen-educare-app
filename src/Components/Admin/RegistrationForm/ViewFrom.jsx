@@ -61,14 +61,16 @@ const StudentDetailsModal = ({ student, onClose }) => {
           </head>
           <body>
             <h6>Student Details</h6>
-            <p><strong>Name:</strong> ${student.firstName}</p>
+            <p><strong>Name:</strong> ${student.studentName}</p>
             <p><strong>Father's Name:</strong> ${student.fatherName}</p>
             <p><strong>Mother's Name:</strong> ${student.motherName}</p>
-            <p><strong>Date of Birth:</strong> ${formatDate(student.dob)}</p>
+            <p><strong>Date of Birth:</strong> ${formatDate(student.dateOfBirth)}</p>
             <p><strong>Gender:</strong> ${student.gender}</p>
-            <p><strong>Phone:</strong> ${student.contactNumber}</p>
-            <p><strong>Email:</strong> ${student.email}</p>
+            <p><strong>Phone:</strong> ${student.phoneNumber}</p>
+            <p><strong>Email:</strong> ${student.emailAddress}</p>
+  
             <p><strong>Address:</strong> ${student.address}</p>
+            <p><strong>Permanent Address:</strong> ${student.permanentAddress}</p>
             <p><strong>Course:</strong> ${formatArrayToString(student.courses)}</p>
             <p><strong>Preferred Timing:</strong> ${student.preferredTiming}</p>
             <p><strong>Reason:</strong> ${student.reason}</p>
@@ -104,7 +106,7 @@ const StudentDetailsModal = ({ student, onClose }) => {
           Student Details
         </Typography>
         <Typography variant="body1">
-          <strong>Name:</strong> {student.firstName}
+          <strong>Name:</strong> {student.studentName}
         </Typography>
         <Typography variant="body1">
           <strong>Father's Name:</strong> {student.fatherName}
@@ -113,28 +115,23 @@ const StudentDetailsModal = ({ student, onClose }) => {
           <strong>Mother's Name:</strong> {student.motherName}
         </Typography>
         <Typography variant="body1">
-          <strong>Date of Birth:</strong> {formatDate(student.dob)}
+          <strong>Date of Birth:</strong> {formatDate(student.dateOfBirth)}
         </Typography>
         <Typography variant="body1">
           <strong>Gender:</strong> {student.gender}
         </Typography>
         <Typography variant="body1">
-          <strong>Phone:</strong> {student.contactNumber}
+          <strong>Phone:</strong> {student.phoneNumber}
         </Typography>
         <Typography variant="body1">
-          <strong>Email:</strong> {student.email}
-        </Typography>
-        <Typography variant="body1">
-          <strong>sameAsCurrentAddress:</strong> {student.sameAsCurrentAddress}
-        </Typography>
-
-        <Typography variant="body1">
-          <strong>permanentAddress:</strong> {student.permanentAddress}
+          <strong>Email:</strong> {student.emailAddress}
         </Typography>
         <Typography variant="body1">
           <strong>Address:</strong> {student.address}
         </Typography>
-
+        {/* <Typography variant="body1">
+          <strong>permanentAddress:</strong> {student.permanentAddress}
+        </Typography> */}
 
         <Typography variant="body1">
           <strong>Course:</strong> {formatArrayToString(student.courses)}

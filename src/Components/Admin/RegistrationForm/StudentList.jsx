@@ -84,9 +84,9 @@ const StudentList = () => {
                 {students.map((student) => (
                   <TableRow key={student.id}>
                     <TableCell>{student.id}</TableCell>
-                    <TableCell>{student.firstName}</TableCell>
+                    <TableCell>{student.studentName}</TableCell>
                     <TableCell>{student.student_id}</TableCell>
-                    <TableCell>{student.contactNumber}</TableCell>
+                    <TableCell>{student.phoneNumber}</TableCell>
                     <TableCell>
                       <Button
                         variant='contained'
